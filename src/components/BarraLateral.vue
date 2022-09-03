@@ -3,9 +3,29 @@
         <h1>
             <img src="../assets/logo.png" alt="Logo alura tracker">
         </h1>
-        <button class="button" @click="alterarTema">
-            {{textoBotao}}
-        </button>
+        <div>
+            <button class="button" @click="alterarTema">
+                {{textoBotao}}
+            </button>
+        </div>
+        <nav class="panel mt-5">
+            <ul>
+                <li>
+                    <router-link to="/" class="link">
+                        <i class="fas fa-tasks">
+                            tarefas
+                        </i>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/projetos" class="link">
+                        <i class="fas fa-project-diagram">
+                            Projetos
+                        </i>
+                    </router-link>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
 
@@ -50,5 +70,14 @@ header{
         padding: 2.5rem;
         height: auto;
     }
+}
+.panel li{
+    matgin: 8px 0;
+}
+.link{
+    color: #fff;
+}
+.link:hover{
+    color: #FAF0CA;
 }
 </style>
